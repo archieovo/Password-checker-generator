@@ -1,4 +1,5 @@
 # Import utils' functions here to use
+from utils import generatePass, checkStrength
 
 def main():
     option: int
@@ -12,9 +13,14 @@ def main():
     except ValueError:
         print("Invalid option.")
         return
-    
-        
+
+    if option == 2:
+        checkStrength()
+    elif option == 1:
+        generatePass()
 
 
 if __name__ == "__main__":
     main()
+
+    
